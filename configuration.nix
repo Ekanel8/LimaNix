@@ -75,8 +75,11 @@
 	hypridle
 	hyprlock
   # <<< IDE >>>
+  make
   jetbrains.goland
   jetbrains.clion
+  gcc # compiler
+  cmake # CMake
   jetbrains.pycharm-professional
   ];
 

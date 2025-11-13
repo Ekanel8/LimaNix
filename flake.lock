@@ -21,23 +21,6 @@
         "type": "github"
       }
     },
-    "illogical-impulse-dotfiles": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1755087685,
-        "narHash": "sha256-l3U/aTwHGxdZgGfs6m8w8keJMTmngZ/aTV0i/5soZVQ=",
-        "owner": "xBLACKICEx",
-        "repo": "dots-hyprland",
-        "rev": "ef1e161c230a6aef92b981aa9066ce21a255da66",
-        "type": "github"
-      },
-      "original": {
-        "owner": "xBLACKICEx",
-        "ref": "tmp",
-        "repo": "dots-hyprland",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1762498405,
@@ -77,7 +60,6 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "illogical-impulse-dotfiles": "illogical-impulse-dotfiles",
         "nixpkgs": "nixpkgs",
         "quickshell": "quickshell"
       }

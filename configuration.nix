@@ -2,7 +2,7 @@
 {
   imports =
     [
-      /home/$USER/.dotfiles/hardware-configuration.nix
+      ./hardware-configuration.nix
       ./modules/virt.nix
     ];
 

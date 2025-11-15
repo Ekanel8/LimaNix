@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstablepkgs,... }:
 {
   imports =
     [
@@ -61,6 +61,7 @@
 	fastfetch
 	obsidian
   waybar
+  unstablepkgs.quickshell
 	brightnessctl
 	grim                            # screenshots
 	slurp                           # screenshots
@@ -75,11 +76,11 @@
 	hypridle
 	hyprlock
   # <<< IDE >>>
-  make
+  gnumake
   jetbrains.goland
   jetbrains.clion
-  gcc # compiler
-  cmake # CMake
+  gcc # C++ compiler
+  unstablepkgs.cmake # CMake
   jetbrains.pycharm-professional
   ];
 

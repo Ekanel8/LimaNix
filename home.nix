@@ -140,7 +140,7 @@
    #
    #'';
 
-
+gtk.enable = true;
 
 
 

@@ -67,6 +67,7 @@
 	slurp                           # screenshots
 	wofi
 	libsForQt5.qtgraphicaleffects   # for sddm themes
+	where-is-my-sddm-theme          # sddm theme
   # <<< Clipboard >>>
 	wl-clipboard
   # <<< Bibata >>>

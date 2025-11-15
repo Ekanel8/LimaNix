@@ -59,7 +59,7 @@
 	unzip
 	zed-editor
 	fastfetch
-	obsidian
+	unstablepkgs.obsidian
   waybar
   unstablepkgs.quickshell
 	brightnessctl
@@ -79,10 +79,17 @@
   # <<< IDE >>>
   gnumake
   jetbrains.goland
+  unstablepkgs.go
   jetbrains.clion
   gcc # C++ compiler
   unstablepkgs.cmake # CMake
   jetbrains.pycharm-professional
+  python314
+  gtk4
+  gtk3
+  papirus-icon-theme
+  #nwg-look
+  graphite-gtk-theme
   ];
 
   # [==== Programs interactions  ====]

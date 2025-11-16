@@ -4,10 +4,10 @@
     [
       ./hardware-configuration.nix
       ./modules/virt.nix
+      ./modules/wmi.nix
     ];
 
   # [==== Bootloader ====]
-
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
@@ -50,9 +50,11 @@
 	wget
 	git
 	firefox
+	wev
 	htop
 	tlp #batary
 	acpi
+	usbutils
 	acpica-tools
 	kitty
 	openvpn
@@ -82,13 +84,14 @@
   unstablepkgs.go
   jetbrains.clion
   gcc # C++ compiler
+  #binutils redmidrivers
+  #dkms  #redmidrivers
   unstablepkgs.cmake # CMake
   jetbrains.pycharm-professional
   python314
   gtk4
   gtk3
   papirus-icon-theme
-  #nwg-look
   graphite-gtk-theme
   ];
 
@@ -104,7 +107,7 @@
   programs.fish.enable = true;
 
   # [==== Services ====]
-
+  services.superduperdriverpack.wmi.enable = true;
   services.gvfs.enable = true;                            # thunar-volman req. allows see the drives
   services.udisks2.enable = true;                         # thunar-volman req. allows usb disks
   security.polkit.enable = true;                          # thunar-volman req. allow mount without root

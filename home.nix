@@ -128,18 +128,6 @@
 
   programs.password-store = { enable = true; };
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = [ "~/.dotfiles/Wallpapers/3.jpg" ];
-      wallpaper = [ "eDP-1,~/.dotfiles/Wallpapers/3.jpg" ];
-    };
-  };
-
-   # home.file.".config/hypr/hyprland.conf".text = ''
-   #
-   #'';
-
    gtk = {
      enable = true;
      theme = {

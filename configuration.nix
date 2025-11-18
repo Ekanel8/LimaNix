@@ -52,6 +52,8 @@
 	firefox
 	wev
 	htop
+	font-awesome
+	killall
 	tlp #batary
 	acpi
 	usbutils
@@ -75,7 +77,7 @@
   # <<< Bibata >>>
 	bibata-cursors
   # <<< Hyprfamily >>>
-	hyprpaper
+	swww
 	hypridle
 	hyprlock
   # <<< IDE >>>

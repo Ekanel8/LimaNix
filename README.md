@@ -1,12 +1,11 @@
 # LimaNix
 TODO:
-setup mkdir {wallpapers, .Secrests, .Env, Screenshots, vault}
-modulness
+setup mkdir {wallpapers, .Secrests, .Env, Screenshots, vault} etc
+modulness + refractor
 quickshell
-notification
+notifications
 acpi patch
-drivers for fn keys
-bindings
+new bindings
 hyprland.nix
-gtk
-jetbra patch + 200 zoom
+jetbra patch declarate
+swww conf

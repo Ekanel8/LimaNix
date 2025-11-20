@@ -60,12 +60,12 @@
 	acpica-tools
 	kitty
 	openvpn
+	unstablepkgs.quickshell
 	unzip
 	zed-editor
 	fastfetch
 	unstablepkgs.obsidian
   waybar
-  unstablepkgs.quickshell
 	brightnessctl
 	grim                            # screenshots
 	slurp                           # screenshots
@@ -86,8 +86,6 @@
   unstablepkgs.go
   jetbrains.clion
   gcc # C++ compiler
-  #binutils redmidrivers
-  #dkms  #redmidrivers
   unstablepkgs.cmake # CMake
   jetbrains.pycharm-professional
   python314

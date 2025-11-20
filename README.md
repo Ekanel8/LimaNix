@@ -9,3 +9,5 @@ new bindings
 hyprland.nix
 jetbra patch declarate
 swww conf
+key switch fix
+noctalia docs

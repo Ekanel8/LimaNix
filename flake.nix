@@ -1,14 +1,16 @@
 {
-  description = "Eka's global NixOS configuration";
+  description = "Jarvis Configuration v1";
 
   inputs = {
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
   };
 
-  outputs = { self, nixpkgs, home-manager, unstable,... }:
+  outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }:
 	let
 		lib = nixpkgs.lib;
 		system = "x86_64-linux";
@@ -21,9 +23,12 @@
 	nixosConfigurations = {
       jarvis = lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit unstablepkgs;
+        specialArgs = {
+          inherit unstablepkgs;
         };
-        modules = [ ./configuration.nix ];
+        modules = [
+          ./configuration.nix
+        ];
       };
     };
 

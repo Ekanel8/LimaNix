@@ -78,9 +78,7 @@
   # <<< Bibata >>>
 	bibata-cursors
   # <<< Hyprfamily >>>
-	swww
-	hypridle
-	hyprlock
+
   # <<< IDE >>>
   gnumake
   jetbrains.goland

@@ -60,7 +60,6 @@
 	acpica-tools
 	kitty
 	openvpn
-	unstablepkgs.quickshell
 	unzip
 	zed-editor
 	fastfetch

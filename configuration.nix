@@ -8,6 +8,8 @@
     ];
 
   # [==== Bootloader ====]
+
+  hardware.bluetooth.enable = true;
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
@@ -106,6 +108,8 @@
   programs.fish.enable = true;
 
   # [==== Services ====]
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
   services.superduperdriverpack.wmi.enable = true;
   services.gvfs.enable = true;                            # thunar-volman req. allows see the drives
   services.udisks2.enable = true;                         # thunar-volman req. allows usb disks

@@ -66,7 +66,6 @@
 	zed-editor
 	fastfetch
 	unstablepkgs.obsidian
-  waybar
 	brightnessctl
 	grim                            # screenshots
 	slurp                           # screenshots

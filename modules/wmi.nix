@@ -14,17 +14,17 @@ let
       sha256 = "sha256-JZmHiJxvORCz1cWFHha7GkJRYnf8P6y8U2OUHEmJw0k=";
     };
 
-    buildInputs = [ pkgs.linuxPackages_6_12.kernel.dev ];
+    buildInputs = [ config.boot.kernelPackages.kernel.dev ];
 
     buildPhase = ''
-      make -C ${pkgs.linuxPackages_6_12.kernel.dev}/lib/modules/${pkgs.linuxPackages_6_12.kernel.modDirVersion}/build \
+      make -C ${config.boot.kernelPackages.kernel.dev}/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/build \
         M=$PWD/drivers/redmibook_wmi modules
     '';
 
     installPhase = ''
-      mkdir -p $out/lib/modules/${pkgs.linuxPackages_6_12.kernel.modDirVersion}/extra
+      mkdir -p $out/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/extra
       cp drivers/redmibook_wmi/redmibook_wmi.ko \
-         $out/lib/modules/${pkgs.linuxPackages_6_12.kernel.modDirVersion}/extra/
+         $out/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/extra/
     '';
   };
 in

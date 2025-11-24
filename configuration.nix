@@ -5,11 +5,12 @@
       ./hardware-configuration.nix
       ./modules/virt.nix
       ./modules/wmi.nix
+      ./modules/ttl.nix
     ];
 
   # [==== Bootloader ====]
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = false;
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
@@ -32,7 +33,7 @@
   users.users.doc = {
     isNormalUser  = true;
     description   = "doc";
-    extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" ];
+    extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" "libvirt" ];
     packages      = with pkgs; [ fish ];
 	  shell         = pkgs.fish;
   };
@@ -49,10 +50,13 @@
 	tree
 	vim
 	feh
+	pass-wayland
 	wget
 	git
 	firefox
 	wev
+	tcpdump
+	ffmpeg
 	htop
 	font-awesome
 	killall
@@ -65,8 +69,10 @@
 	unzip
 	zed-editor
 	fastfetch
+	prismlauncher
 	unstablepkgs.obsidian
 	brightnessctl
+	nix-output-monitor
 	grim                            # screenshots
 	slurp                           # screenshots
 	wofi
@@ -120,9 +126,13 @@
 
   services.openssh = {
 	enable = true;                         # Enable the OpenSSH daemon.
-	settings = {
-		PermitRootLogin = "yes";           # DELETE IT !!!!!!!!!!!!
-	};
+	# settings = {
+	#	 PermitRootLogin = "yes";
+	#};
+  };
+
+  environment.variables = {
+    QT_QPA_PLATFORMTHEME = "gtk3";
   };
 
   # [==== Locales ====]

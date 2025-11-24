@@ -2,6 +2,10 @@
 {
   programs.virt-manager.enable = true;
 
+  users.extraGroups = {
+     libvirt = {};
+   };
+
   virtualisation = {
     spiceUSBRedirection.enable = true;
 

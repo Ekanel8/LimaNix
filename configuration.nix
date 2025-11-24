@@ -6,11 +6,13 @@
       ./modules/virt.nix
       ./modules/wmi.nix
       ./modules/ttl.nix
+      ./modules/bluetooth.nix
+      ./modules/sddm.nix
+      ./modules/thunar.nix
     ];
 
   # [==== Bootloader ====]
 
-  hardware.bluetooth.enable = false;
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
@@ -65,6 +67,7 @@
 	usbutils
 	acpica-tools
 	kitty
+	neovim
 	openvpn
 	unzip
 	zed-editor
@@ -75,9 +78,6 @@
 	nix-output-monitor
 	grim                            # screenshots
 	slurp                           # screenshots
-	wofi
-	libsForQt5.qtgraphicaleffects   # for sddm themes
-	where-is-my-sddm-theme          # sddm theme
   # <<< Clipboard >>>
 	wl-clipboard
   # <<< Bibata >>>
@@ -100,29 +100,12 @@
   ];
 
   # [==== Programs interactions  ====]
-
-  programs.thunar.enable = true;               # file manager
-  programs.thunar.plugins = with pkgs.xfce; [
-   thunar-volman                               # automount addon
-   thunar-archive-plugin                       # archive   addon
-  ];
-
   programs.hyprland.enable = true;
   programs.fish.enable = true;
-
   # [==== Services ====]
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
   services.superduperdriverpack.wmi.enable = true;
-  services.gvfs.enable = true;                            # thunar-volman req. allows see the drives
-  services.udisks2.enable = true;                         # thunar-volman req. allows usb disks
-  security.polkit.enable = true;                          # thunar-volman req. allow mount without root
-  services.tumbler.enable = true;
-  services.displayManager.sddm = {
-	enable = true;
-	wayland.enable = true;
-	theme = "${pkgs.where-is-my-sddm-theme.override { variants = [ "qt5" ]; }}/share/sddm/themes/where_is_my_sddm_theme_qt5";
-};
 
   services.openssh = {
 	enable = true;                         # Enable the OpenSSH daemon.
@@ -162,16 +145,3 @@
   system.stateVersion = "25.05";
 
 }
-
-# Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).

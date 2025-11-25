@@ -9,6 +9,8 @@
       ./modules/bluetooth.nix
       ./modules/sddm.nix
       ./modules/thunar.nix
+      ./modules/gtk.nix
+      ./modules/IDE.nix
     ];
 
   # [==== Bootloader ====]
@@ -70,7 +72,6 @@
 	neovim
 	openvpn
 	unzip
-	zed-editor
 	fastfetch
 	prismlauncher
 	unstablepkgs.obsidian
@@ -82,21 +83,6 @@
 	wl-clipboard
   # <<< Bibata >>>
 	bibata-cursors
-  # <<< Hyprfamily >>>
-
-  # <<< IDE >>>
-  gnumake
-  jetbrains.goland
-  unstablepkgs.go
-  jetbrains.clion
-  gcc # C++ compiler
-  unstablepkgs.cmake # CMake
-  jetbrains.pycharm-professional
-  python314
-  gtk4
-  gtk3
-  papirus-icon-theme
-  graphite-gtk-theme
   ];
 
   # [==== Programs interactions  ====]
@@ -114,10 +100,6 @@
 	#};
   };
 
-  environment.variables = {
-    QT_QPA_PLATFORMTHEME = "gtk3";
-  };
-
   # [==== Locales ====]
 
   time.timeZone = "Europe/Moscow";                        # Set your time zone.
@@ -133,13 +115,6 @@
     LC_PAPER = "ru_RU.UTF-8";
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
-  };
-
-  # [==== X11 key map ====]
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   system.stateVersion = "25.05";

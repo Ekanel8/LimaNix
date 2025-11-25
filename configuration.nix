@@ -11,6 +11,7 @@
       ./modules/thunar.nix
       ./modules/gtk.nix
       ./modules/IDE.nix
+      ./modules/audio.nix
     ];
 
   # [==== Bootloader ====]

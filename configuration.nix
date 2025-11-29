@@ -72,7 +72,7 @@
 	kitty
 	neovim
 	openvpn
-	unzip
+	unstablepkgs.unzip
 	fastfetch
 	prismlauncher
 	unstablepkgs.obsidian

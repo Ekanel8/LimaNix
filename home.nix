@@ -80,8 +80,18 @@
 	shellAliases = {
 		g = "git";
 		"..." = "cd ../..";
+		jarvis-switch = "sudo nixos-rebuild -v switch --flake \"path:/home/doc/.dotfiles/\"";
 		};
 	};
+
+	#programs.fastfetch = {
+	#enable = true;
+	#settings = {
+	#  logo = {
+	#		source = "./Faces/Logo.jpg";
+	#		};
+	#  };
+	#};
 
   programs.kitty = {
 	enable = true;

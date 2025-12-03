@@ -151,6 +151,9 @@
 		color14              = "#8fd3ff";
 		color15              = "#f0f3f6";
 	};
+ keybindings = {
+    "ctrl+a" = "select_all";
+  };
   };
  programs.zed-editor = {
     enable = true;

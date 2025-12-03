@@ -12,10 +12,13 @@
       ./modules/gtk.nix
       ./modules/IDE.nix
       ./modules/audio.nix
+      ./modules/locales.nix
     ];
 
   # [==== Bootloader ====]
-
+  boot.kernelParams = [
+    "amdgpu.sg_display=0"
+  ]; # redmibook only
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
@@ -60,6 +63,7 @@
 	git
 	firefox
 	wev
+	file-roller # thunar unzipper
 	tcpdump
 	ffmpeg
 	htop
@@ -82,6 +86,7 @@
 	slurp                           # screenshots
   # <<< Clipboard >>>
 	wl-clipboard
+	wl-clip-persist
   # <<< Bibata >>>
 	bibata-cursors
   ];
@@ -99,23 +104,6 @@
 	# settings = {
 	#	 PermitRootLogin = "yes";
 	#};
-  };
-
-  # [==== Locales ====]
-
-  time.timeZone = "Europe/Moscow";                        # Set your time zone.
-  i18n.defaultLocale = "en_US.UTF-8";                     # Select internationalisation properties.
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "ru_RU.UTF-8";
-    LC_IDENTIFICATION = "ru_RU.UTF-8";
-    LC_MEASUREMENT = "ru_RU.UTF-8";
-    LC_MONETARY = "ru_RU.UTF-8";
-    LC_NAME = "ru_RU.UTF-8";
-    LC_NUMERIC = "ru_RU.UTF-8";
-    LC_PAPER = "ru_RU.UTF-8";
-    LC_TELEPHONE = "ru_RU.UTF-8";
-    LC_TIME = "ru_RU.UTF-8";
   };
 
   system.stateVersion = "25.05";

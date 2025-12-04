@@ -3,22 +3,7 @@
 {
   home.username = "doc";
   home.homeDirectory = "/home/doc";
-  home.stateVersion = "25.05"; # Please DO NOT CHANGE
-
-  home.packages = [
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-  ];
+  home.stateVersion = "25.05"; # DO NOT CHANGE
 
   home.file = {
     #smtng for dotfiles
@@ -28,7 +13,7 @@
     # EDITOR = "emacs";
   };
 
-  programs.home-manager.enable = true; # Do NOT CHANGE
+  programs.home-manager.enable = true; # DO NOT CHANGE
 
   imports = [
     ./modules/home/fish.nix
@@ -36,14 +21,6 @@
     ./modules/home/zed.nix
     ./modules/home/gtk.nix
     #./modules/home/fastfetch.nix
+    ./modules/home/passtore.nix
   ];
-
-
-
-
-
-
-
-
-  programs.password-store = { enable = true; };
 }

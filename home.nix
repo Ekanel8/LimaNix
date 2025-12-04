@@ -33,6 +33,7 @@
   imports = [
     ./modules/home/fish.nix
     ./modules/home/kitty.nix
+    ./modules/home/zed.nix
   ];
 
 
@@ -48,18 +49,7 @@
 	#};
 
 
- programs.zed-editor = {
-    enable = true;
-    extensions = [
-      "one-dark"  #theme
-      "nix"       #.nix support
-    ];
-    userSettings = {
-      theme = "One Dark";
-      ui_font_size = 16;
-      buffer_font_size = 15;
-    };
-  };
+
 
   programs.password-store = { enable = true; };
 

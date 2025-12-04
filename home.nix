@@ -34,6 +34,7 @@
     ./modules/home/fish.nix
     ./modules/home/kitty.nix
     ./modules/home/zed.nix
+    ./modules/home/gtk.nix
   ];
 
 
@@ -52,24 +53,3 @@
 
 
   programs.password-store = { enable = true; };
-
-   gtk = {
-     enable = true;
-     theme = {
-       name = "Graphite-Dark";
-       package = pkgs.graphite-gtk-theme;
-     };
-     iconTheme = {
-       name = "Papirus-Dark";
-       package = pkgs.papirus-icon-theme;
-     };
-   };
-   services.xsettingsd = {
-     enable = true;
-     settings = {
-       "Net/ThemeName" = "Graphite-dark";
-       "Net/IconThemeName" = "Papirus-Dark";
-       "Gtk/FontName" = "Inter 10";
-     };
-   };
-}

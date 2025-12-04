@@ -35,19 +35,12 @@
     ./modules/home/kitty.nix
     ./modules/home/zed.nix
     ./modules/home/gtk.nix
+    #./modules/home/fastfetch.nix
   ];
 
 
 
-	#programs.fastfetch = {
-	#enable = true;
-	#settings = {
-	#  logo = {
-	#		source = "~/.dotfiles/Faces/NixOS.png";
-	#		height = 14;
-	#		};
-	#  };
-	#};
+
 
 
 

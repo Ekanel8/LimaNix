@@ -3,24 +3,22 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/virt.nix
+      ./modules/bootloader.nix
       ./modules/wmi.nix
       ./modules/network.nix
       ./modules/bluetooth.nix
       ./modules/sddm.nix
+      ./modules/audio.nix
+      ./modules/locales.nix
+      ./modules/user.nix
+      #============^^^=============
+      ./modules/virt.nix
       ./modules/thunar.nix
       ./modules/gtk.nix
       ./modules/IDE.nix
-      ./modules/audio.nix
-      ./modules/locales.nix
       #./modules/pkgs.nix
-      ./modules/user.nix
     ];
 
-  # [==== Bootloader ====]
-  boot.loader.systemd-boot.enable      = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  nix.settings.experimental-features   = ["nix-command" "flakes"];
   # [==== PKGS ====]
 
   nixpkgs.config.allowUnfree = true;

@@ -2,7 +2,7 @@
 {
   home.username = "doc";
   home.homeDirectory = "/home/doc";
-  home.stateVersion = "25.05"; # DO NOT CHANGE
+  home.stateVersion = "25.11";
 
   home.file = {
     #smtng for dotfiles

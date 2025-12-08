@@ -14,8 +14,8 @@
 
       qemu = {
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
+        #ovmf.enable = true;
+        #ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
 
@@ -40,6 +40,6 @@
     spice-protocol
 
     win-spice
-    win-virtio
+    virtio-win
   ];
 }

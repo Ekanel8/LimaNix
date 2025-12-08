@@ -1,4 +1,4 @@
-{ config, pkgs, unstablepkgs,... }:
+{ config, pkgs, unstablepkgs, ... }:
 {
   imports =
     [
@@ -13,23 +13,14 @@
       ./modules/IDE.nix
       ./modules/audio.nix
       ./modules/locales.nix
+      #./modules/pkgs.nix
+      ./modules/user.nix
     ];
 
   # [==== Bootloader ====]
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
-
-  # [==== USER ====] # P.S. Use passwd
-
-  users.users.doc = {
-    isNormalUser  = true;
-    description   = "doc";
-    extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" "libvirt" ];
-    packages      = with pkgs; [ fish ];
-	  shell         = pkgs.fish;
-  };
-
   # [==== PKGS ====]
 
   nixpkgs.config.allowUnfree = true;
@@ -54,6 +45,8 @@
 	acpi
 	usbutils
 	acpica-tools
+	discord
+	vencord
 	kitty
 	neovim
 	openvpn

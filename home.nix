@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   home.username = "doc";
   home.homeDirectory = "/home/doc";
@@ -16,6 +15,7 @@
   programs.home-manager.enable = true; # DO NOT CHANGE
 
   imports = [
+    #./hyprland.nix
     ./modules/home/fish.nix
     ./modules/home/kitty.nix
     ./modules/home/zed.nix

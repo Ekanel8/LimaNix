@@ -1,5 +1,5 @@
 {
-  description = "Jarvis Configuration v1";
+  description = "Tardis Configuration v1";
 
   inputs = {
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -25,7 +25,7 @@
     };
 	in {
 	nixosConfigurations = {
-      jarvis = lib.nixosSystem {
+      tardis = lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit unstablepkgs inputs;

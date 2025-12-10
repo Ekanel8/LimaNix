@@ -1,4 +1,4 @@
 Secrets/
 env/
 hardware-configuration.nix
-# jetbra patch
+modules/home/jetbra.sh

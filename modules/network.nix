@@ -10,7 +10,7 @@
 	#};
   };
 
-  networking.hostName                  = "jarvis";      # Define your hostname.
+  networking.hostName                  = "tardis";      # Define your hostname.
   networking.firewall.enable           = true;          # Basic firewall
   networking.networkmanager.enable     = true;          # Enable networking
 

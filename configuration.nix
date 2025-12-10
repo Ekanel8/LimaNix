@@ -7,7 +7,7 @@
       ./modules/wmi.nix
       ./modules/network.nix
       ./modules/bluetooth.nix
-      ./modules/sddm.nix
+      #./modules/sddm.nix
       ./modules/audio.nix
       ./modules/locales.nix
       ./modules/user.nix
@@ -61,8 +61,6 @@
   # <<< Clipboard >>>
 	wl-clipboard
 	wl-clip-persist
-  # <<< Bibata >>>
-	bibata-cursors
   ];
 
   # [==== Programs interactions  ====]

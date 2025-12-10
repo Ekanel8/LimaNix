@@ -5,6 +5,7 @@
     gtk3
     papirus-icon-theme # Icons
     graphite-gtk-theme # Theme
+    bibata-cursors
   ];
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "gtk3"; # Global setting

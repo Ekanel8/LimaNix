@@ -8,7 +8,7 @@
     '';
 
     functions = {
-      jarvis = ''
+      tardis = ''
         set action $argv[1]
         set state $argv[2]
         switch "$action"

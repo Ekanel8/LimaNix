@@ -12,7 +12,7 @@
       ./modules/locales.nix
       ./modules/user.nix
       #============^^^=============
-      ./modules/virt.nix
+      #./modules/virt.nix
       ./modules/thunar.nix
       ./modules/gtk.nix
       ./modules/IDE.nix
@@ -26,8 +26,9 @@
   environment.systemPackages = with pkgs; [
   # nano (default)
 	tree
+	bash
 	vim
-	cava
+  cava
 	file-roller                                 # unzipper
 	feh
 	pass-wayland
@@ -50,7 +51,7 @@
 	openvpn
 	unstablepkgs.unzip
 	fastfetch
-	prismlauncher
+	unstablepkgs.prismlauncher
 	unstablepkgs.obsidian
 	brightnessctl
 	nix-output-monitor

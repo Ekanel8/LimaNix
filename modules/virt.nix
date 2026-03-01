@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   programs.virt-manager.enable = true;
-
   users.extraGroups = {
      libvirt = {};
    };

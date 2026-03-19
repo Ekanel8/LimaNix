@@ -7,6 +7,7 @@
       ./modules/wmi.nix
       ./modules/network.nix
       ./modules/bluetooth.nix
+      ./modules/docker.nix
       #./modules/sddm.nix
       ./modules/audio.nix
       ./modules/locales.nix
@@ -27,6 +28,7 @@
   # nano (default)
 	tree
 	bash
+	v2rayn
 	vim
   cava
 	file-roller                                 # unzipper
@@ -48,6 +50,7 @@
 	vencord
 	kitty
 	neovim
+	xray
 	openvpn
 	unstablepkgs.unzip
 	fastfetch

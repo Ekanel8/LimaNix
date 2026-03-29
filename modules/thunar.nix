@@ -1,9 +1,9 @@
 { pkgs, config, inputs, ... }:
 {
   programs.thunar.enable = true;               # file manager
-  programs.thunar.plugins = with pkgs.xfce; [
+  programs.thunar.plugins = with pkgs; [
    thunar-volman                               # Automount
-   xfce.thunar-archive-plugin     # Archive Ops
+   thunar-archive-plugin                       # Archive Ops
   ];
   services.gvfs.enable = true;                 # Allows thunar to see a drives
   services.udisks2.enable = true;              # Allows usb drives

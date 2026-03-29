@@ -1,4 +1,4 @@
-{ config, pkgs, unstablepkgs, ... }:
+{ config, pkgs, ... }:
 {
   users.users.doc = {
     isNormalUser  = true;

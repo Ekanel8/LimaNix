@@ -1,4 +1,4 @@
-{ pkgs, unstablepkgs, ... }:
+{ config, pkgs, ... }:
 {
 
 }

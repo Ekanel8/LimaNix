@@ -1,0 +1,20 @@
+{
+  imports =
+    [
+      ./bootloader.nix
+      ./wmi.nix
+      ./network.nix
+      ./bluetooth.nix
+      #./modules/sddm.nix
+      ./audio.nix
+      ./locales.nix
+      ./user.nix
+      ./noctalia.nix
+      ###################
+      ./virt.nix
+      ./thunar.nix
+      ./gtk.nix
+      ./IDE.nix
+      ./docker.nix
+    ];
+}

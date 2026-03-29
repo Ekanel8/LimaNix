@@ -20,6 +20,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    vagrant
     qemu
     virt-manager
     virt-viewer

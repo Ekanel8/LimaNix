@@ -1,34 +1,18 @@
-{ config, pkgs, unstablepkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/bootloader.nix
-      ./modules/wmi.nix
-      ./modules/network.nix
-      ./modules/bluetooth.nix
-      ./modules/docker.nix
-      #./modules/sddm.nix
-      ./modules/audio.nix
-      ./modules/locales.nix
-      ./modules/user.nix
-      #============^^^=============
-      #./modules/virt.nix
-      ./modules/thunar.nix
-      ./modules/gtk.nix
-      ./modules/IDE.nix
-      #./modules/pkgs.nix
+      ./modules
     ];
 
   # [==== PKGS ====]
 
   nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
   # nano (default)
 	tree
 	bash
-	v2rayn
 	vim
   cava
 	file-roller                                 # unzipper
@@ -52,12 +36,10 @@
 	neovim
 	xray
 	openvpn
-	unstablepkgs.unzip
+	unzip
 	fastfetch
-	unstablepkgs.prismlauncher
-	unstablepkgs.obsidian
+	obsidian
 	brightnessctl
-	nix-output-monitor
 	jetbrains-mono
   font-awesome
 	grim                            # screenshots
@@ -68,6 +50,7 @@
   ];
 
   # [==== Programs interactions  ====]
+  # programs.niri.enable = true;
   programs.hyprland.enable = true;
   programs.fish.enable = true;
   # [==== Services ====]
@@ -75,6 +58,7 @@
   services.upower.enable = true;
   services.superduperdriverpack.wmi.enable = true;
 
+  # Downloaded version of system. Do not need to change it
   system.stateVersion = "25.05";
 
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, unstablepkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   services.getty.autologinUser = "doc";
   environment.loginShellInit = ''

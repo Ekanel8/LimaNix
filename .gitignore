@@ -1,4 +1,3 @@
 Secrets/
 env/
-hardware-configuration.nix
 modules/home/jetbra.sh

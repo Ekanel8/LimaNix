@@ -2,8 +2,8 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
       ./modules
+      ./hardware-configuration.nix
     ];
 
   # [==== PKGS ====]
@@ -11,6 +11,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
   # nano (default)
+  git
 	tree
 	bash
 	vim
@@ -19,7 +20,6 @@
 	feh
 	pass-wayland
 	wget
-	git
 	firefox
 	wev
 	tcpdump

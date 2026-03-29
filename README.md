@@ -1,6 +1,6 @@
 <center>
 <h1>Eka's Dotfiles</h1>
-<img src="Faces/preview.png" alt="Desktop Showcase" width="768">
+<img src="img/preview.png" alt="Desktop Showcase" width="768">
 </center>
 
 > [!NOTE]

@@ -57,7 +57,7 @@
   # [==== Services ====]
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
-
+  services.flatpak.enable = true;
   # Downloaded version of system. Do not need to change it
   system.stateVersion = "25.05";
 

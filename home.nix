@@ -4,5 +4,5 @@
   home.homeDirectory = "/home/doc";
   home.stateVersion = "26.05";
 
-  imports = [ ./home ];
+  imports = [ ./modules/home ];
 }

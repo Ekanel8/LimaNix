@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   # nano (default)
   git
+  v2rayn
 	tree
 	bash
 	vim
@@ -56,7 +57,6 @@
   # [==== Services ====]
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
-  services.superduperdriverpack.wmi.enable = true;
 
   # Downloaded version of system. Do not need to change it
   system.stateVersion = "25.05";

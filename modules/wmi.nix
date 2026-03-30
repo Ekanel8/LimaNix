@@ -1,37 +1,41 @@
 { config, pkgs, lib, ... }:
 
 let
-  cfg = config.services.superduperdriverpack.wmi;
+  cfg = config.services.redmibook.wmi;
 
   wmiDrv = pkgs.stdenv.mkDerivation rec {
     pname = "redmibook_wmi";
     version = "1.0";
 
     src = pkgs.fetchFromGitHub {
-      owner = "vrolife";
-      repo = "modern_laptop";
+      owner = "Ekanel8";
+      repo = "Redmibook-2023-WMI-NixOS-Module";
       rev = "main";
-      sha256 = "sha256-JZmHiJxvORCz1cWFHha7GkJRYnf8P6y8U2OUHEmJw0k=";
+      sha256 = "sha256-tW8Ft9h46uJc+Ch9KPk0tdk+w2BjfQtbFwS7k/GXjwk=";
     };
 
-    buildInputs = [ config.boot.kernelPackages.kernel.dev ];
+    buildInputs = [
+      config.boot.kernelPackages.kernel.dev
+      pkgs.gnumake
+      pkgs.gcc
+    ];
 
     buildPhase = ''
       make -C ${config.boot.kernelPackages.kernel.dev}/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/build \
-        M=$PWD/drivers/redmibook_wmi modules
+        M=$PWD modules
     '';
 
     installPhase = ''
       mkdir -p $out/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/extra
-      cp drivers/redmibook_wmi/redmibook_wmi.ko \
+      cp redmibook_wmi.ko \
          $out/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/extra/
     '';
   };
 in
 {
-  options.services.superduperdriverpack.wmi.enable = lib.mkOption {
+  options.services.redmibook.wmi.enable = lib.mkOption {
     type = lib.types.bool;
-    default = false;
+    default = true;
     description = "Enable Redmibook WMI kernel module.";
   };
 

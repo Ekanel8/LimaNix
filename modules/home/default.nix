@@ -7,6 +7,5 @@
     ./gtk.nix
     ./passtore.nix
     ./fastfetch.nix
-    ./alacritt.nix
   ];
 }

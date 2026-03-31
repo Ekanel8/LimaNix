@@ -43,7 +43,6 @@
   font-awesome
 	grim                            # screenshots
 	slurp                           # screenshots
-	alacritty
 	throne
   # <<< Clipboard >>>
 	wl-clipboard

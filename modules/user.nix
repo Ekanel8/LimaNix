@@ -4,7 +4,7 @@
     isNormalUser  = true;
     description   = "doc";
     extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" "libvirt" ];
-    packages      = with pkgs; [ fish ];
+    packages      = with pkgs; [ ];
 	  shell         = pkgs.fish;
   };
 }

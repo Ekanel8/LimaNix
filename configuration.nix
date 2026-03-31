@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   # nano (default)
   git
+  v2rayn
 	tree
 	bash
 	vim
@@ -44,6 +45,7 @@
   font-awesome
 	grim                            # screenshots
 	slurp                           # screenshots
+	alacritty
   # <<< Clipboard >>>
 	wl-clipboard
 	wl-clip-persist

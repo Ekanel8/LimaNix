@@ -6,5 +6,6 @@
     ./zed.nix
     ./gtk.nix
     ./passtore.nix
+    ./fastfetch
   ];
 }

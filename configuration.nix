@@ -12,7 +12,6 @@
   environment.systemPackages = with pkgs; [
   # nano (default)
   git
-  v2rayn
 	tree
 	bash
 	vim

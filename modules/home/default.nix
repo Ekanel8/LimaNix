@@ -6,6 +6,5 @@
     ./zed.nix
     ./gtk.nix
     ./passtore.nix
-    ./v2rayn
   ];
 }

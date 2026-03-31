@@ -12,7 +12,6 @@
   environment.systemPackages = with pkgs; [
   # nano (default)
   git
-  v2rayn
 	tree
 	bash
 	vim
@@ -36,7 +35,6 @@
 	kitty
 	neovim
 	xray
-	openvpn
 	unzip
 	fastfetch
 	obsidian
@@ -46,10 +44,12 @@
 	grim                            # screenshots
 	slurp                           # screenshots
 	alacritty
+	throne
   # <<< Clipboard >>>
 	wl-clipboard
 	wl-clip-persist
   ];
+
 
   # [==== Programs interactions  ====]
   # programs.niri.enable = true;

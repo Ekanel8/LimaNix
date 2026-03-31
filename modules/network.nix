@@ -3,6 +3,8 @@
 {
   boot.kernel.sysctl."net.ipv4.ip_default_ttl" = 65;   # free access point
 
+  networking.proxy.default = "http://127.0.0.1:2080";
+
   services.openssh = {                                 # Enable the OpenSSH daemon
 	enable = true;
 	# settings = {

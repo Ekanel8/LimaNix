@@ -1,193 +1,121 @@
 {
   programs.fastfetch = {
     enable = true;
-
     settings = {
       logo = {
-        type = "kitty-direct";
-        # logo source: https://camo.githubusercontent.com/955fca7bc4a99f4142047a976fff46c50616dd7d2a20aa1bf36ea04104bb025c/68747470733a2f2f692e696d6775722e636f6d2f367146436c41312e706e67
-        source = "~/.logo.png";
-        # height = 16;
-        width = 34;
+        type = "data-raw";
         padding = {
-          top = 8;
-          bottom = 8;
-          right = 5;
-          left = 5;
+          top = 1;
+          bottom = 1;
         };
+        source = ''
+          [38;2;82;119;195m       ◢██◣[38;2;127;183;255m   ◥███◣  ◢██◣
+          [38;2;82;119;195m       ◥███◣[38;2;127;183;255m   ◥███◣◢███◤
+          [38;2;82;119;195m        ◥███◣[38;2;127;183;255m   ◥██████◤
+          [38;2;82;119;195m    ◢████████████[48;2;127;183;255m◣[0m[38;2;127;183;255m████◤[38;2;82;119;195m   ◢◣
+          [38;2;82;119;195m   ◢██████████████[48;2;127;183;255m◣[0m[38;2;127;183;255m███◣[38;2;82;119;195m  ◢██◣
+          [38;2;127;183;255m        ◢███◤      ◥███◣[38;2;82;119;195m◢███◤
+          [38;2;127;183;255m       ◢███◤        ◥██[48;2;82;119;195m◤[0m[38;2;82;119;195m███◤
+          [38;2;127;183;255m◢█████████◤          ◥[48;2;82;119;195m◤[0m[38;2;82;119;195m████████◣
+          [38;2;127;183;255m◥████████[48;2;82;119;195m◤[0m[38;2;82;119;195m◣          ◢█████████◤
+          [38;2;127;183;255m    ◢███[48;2;82;119;195m◤[0m[38;2;82;119;195m██◣        ◢███◤
+          [38;2;127;183;255m   ◢███◤[38;2;82;119;195m◥███◣      ◢███◤
+          [38;2;127;183;255m   ◥██◤  [38;2;82;119;195m◥███[48;2;127;183;255m◣[0m[38;2;127;183;255m██████████████◤
+          [38;2;127;183;255m    ◥◤   [38;2;82;119;195m◢████[48;2;127;183;255m◣[0m[38;2;127;183;255m████████████◤
+          [38;2;82;119;195m        ◢██████◣[38;2;127;183;255m   ◥███◣
+          [38;2;82;119;195m       ◢███◤◥███◣[38;2;127;183;255m   ◥███◣
+          [38;2;82;119;195m       ◥██◤  ◥███◣[38;2;127;183;255m   ◥██◤
+        '';
       };
 
       display = {
-        separator = " -> ";
+        separator = " ";
       };
 
       modules = [
-        "break"
-
         {
           type = "custom";
-          format = "╭────────────────────── Hardware ──────────────────────╮";
-          outputColor = "red";
+          key = "╭────────────╮";
         }
-
         {
           type = "title";
-          key = " PC";
-          keyColor = "green";
-          format = "{user-name-colored} on {host-name-colored}";
+          key = "│ {#31} User     {#keys}│";
+          format = "{#blue}{user-name}{#}@{#blue}{host-name}{#}";
+          color = "blue";
         }
-
-        {
-          type = "cpu";
-          key = "│ ├󰍛 CPU";
-          showPeCoreCount = true;
-          format = "{name} {freq-max}";
-          keyColor = "green";
-        }
-
-        {
-          type = "gpu";
-          key = "│ ├󰍛 GPU";
-          keyColor = "green";
-          format = "{vendor} {name}";
-        }
-
-        {
-          type = "disk";
-          key = "│ ├󱛟 Disk";
-          keyColor = "green";
-        }
-
-        {
-          type = "memory";
-          key = "└ └󰍛 Memory";
-          keyColor = "green";
-        }
-
-        {
-          type = "custom";
-          format = "╰──────────────────────────────────────────────────────╯";
-          outputColor = "red";
-        }
-
-        "break"
-
-        {
-          type = "custom";
-          format = "╭────────────────────── Software ──────────────────────╮";
-          outputColor = "red";
-        }
-
         {
           type = "os";
-          key = " OS";
-          keyColor = "yellow";
-          # TODO: use the pretty name
-          # format = "{pretty-name} {version-id} {codename}";
-          format = "NixOS {version-id} {codename}";
+          key = "│ {#32}{icon} OS       {#keys}│";
         }
-
+        {
+          type = "host";
+          key = "│ {#33}󰌢 Host     {#keys}│";
+        }
         {
           type = "kernel";
-          key = "│ ├ Kernel";
-          keyColor = "yellow";
+          key = "│ {#34} Kernel   {#keys}│";
         }
-
-        {
-          type = "shell";
-          key = "│ ├ Shell";
-          keyColor = "yellow";
-          format = "{1}";
-        }
-
-        {
-          type = "packages";
-          key = "│ ├󰏖 Packages";
-          keyColor = "yellow";
-        }
-
-        {
-          type = "command";
-          key = "│ ├ OS Age";
-          keyColor = "yellow";
-          text = ''
-            birth_install=$(stat -c %W /); \
-            current=$(date +%s); \
-            time_progression=$((current - birth_install)); \
-            days_difference=$((time_progression / 86400)); \
-            echo $days_difference days
-          '';
-        }
-
         {
           type = "uptime";
-          key = "└ └ Uptime";
-          keyColor = "yellow";
+          key = "│ {#35}󰅐 Uptime   {#keys}│";
         }
-
-        "break"
-
         {
-          type = "de";
-          key = " DE";
-          keyColor = "blue";
-          format = "{1}";
+          type = "shell";
+          key = "│ {#37} Shell    {#keys}│";
         }
-
         {
           type = "wm";
-          key = "│ ├ Compositor";
-          keyColor = "blue";
-          format = "{1}";
+          key = "│ {#38} WM       {#keys}│";
         }
-
         {
-          type = "lm";
-          key = "│ ├ Login";
-          keyColor = "blue";
-          format = "{1}";
+          type = "display";
+          key = "│ {#39}󰍹 Display  {#keys}│";
         }
-
         {
           type = "terminal";
-          key = "│ ├ Terminal";
-          keyColor = "blue";
-          format = "{1}";
+          key = "│ {#31} Terminal {#keys}│";
         }
-
         {
-          type = "terminalfont";
-          key = "│ ├ Font";
-          keyColor = "blue";
-          format = "{name}";
+          type = "resolution";
+          key = "│ {#32}󰍹 Screen   {#keys}│";
         }
-
         {
-          type = "icons";
-          key = "│ ├󰄛 Icons";
-          keyColor = "blue";
+          type = "cpu";
+          key = "│ {#33}󰍛 CPU      {#keys}│";
         }
-
+        {
+          type = "gpu";
+          key = "│ {#34}󰢮 GPU      {#keys}│";
+        }
+        {
+          type = "memory";
+          key = "│ {#35}󰾆 Memory   {#keys}│";
+        }
+        {
+          type = "disk";
+          key = "│ {#37}󰋊 Disk     {#keys}│";
+        }
+        {
+          type = "battery";
+          key = "│ {#38}󰁹 Battery  {#keys}│";
+        }
+        {
+          type = "localip";
+          key = "│ {#39}󰩟 IP       {#keys}│";
+        }
+        {
+          type = "locale";
+          key = "│ {#32}󰬎 Locale   {#keys}│";
+        }
         {
           type = "custom";
-          key = "└ └ Theme";
-          keyColor = "blue";
-          format = "Catppuccin Mocha";
+          key = "╰────────────╯";
         }
-
-        {
-          type = "custom";
-          format = "╰──────────────────────────────────────────────────────╯";
-          outputColor = "red";
-        }
-
         {
           type = "colors";
-          paddingLeft = 20;
+          key = " {#34}             {#keys}";
           symbol = "circle";
         }
-
-        "break"
       ];
     };
   };

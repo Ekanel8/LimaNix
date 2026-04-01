@@ -7,5 +7,6 @@
     ./gtk.nix
     ./passtore.nix
     ./fastfetch.nix
+    ./hyprland.nix
   ];
 }

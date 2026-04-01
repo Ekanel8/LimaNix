@@ -28,6 +28,6 @@
     spice-gtk
     spice-protocol
     win-spice
-    virtio-win
+    # virtio-win
   ];
 }

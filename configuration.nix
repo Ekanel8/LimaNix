@@ -44,6 +44,7 @@
 	grim                            # screenshots
 	slurp                           # screenshots
 	throne
+	cbonsai
   # <<< Clipboard >>>
 	wl-clipboard
 	wl-clip-persist

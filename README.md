@@ -3,11 +3,11 @@
 <p align="center">
 
 <img src="https://img.shields.io/badge/NixOS-5277C3?logo=nixos&logoColor=1e1e2e" />
-<img src="https://img.shields.io/badge/Home%20Manager-f5c2e7?logo=nixos&logoColor=1e1e2e" />
-<img src="https://img.shields.io/badge/Hyprland-58E1FF?logo=hyprland&logoColor=1e1e2e" />
+<img src="https://img.shields.io/badge/Home%20Manager-e08fb8?logo=nixos&logoColor=1e1e2e" />
+<img src="https://img.shields.io/badge/Hyprland-39c5ff?logo=hyprland&logoColor=1e1e2e" />
 <img src="https://img.shields.io/badge/Noctalia-635BFF?logo=tripadvisor&logoColor=1e1e2e" />
 <img src="https://img.shields.io/badge/Fish-34C534?logo=fishshell&logoColor=1e1e2e" />
-
+<br>
 <img src="img/preview2.jpg" alt="Desktop Showcase" width="768">
 <img src="img/preview.png" alt="Desktop Showcase" width="768">
 

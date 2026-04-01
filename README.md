@@ -24,7 +24,6 @@
 git clone https://github.com/Ekanel8/LimaNix
 cd <path>/LimaNix
 sudo nixos-rebuild switch --flake .
-### turn off wmi.nix in /modules/default.nix. Unless you are using Redmibook pro 20XX
 ```
 
 ### This is MY configuration - there is no magical installer here. You can use it to study the nixos structure or take the module you need. It seems almost all of them are self-sufficient :0 The entire configuration was collected from many things I liked from various repositories and combined into these dotfiles

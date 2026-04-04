@@ -4,6 +4,8 @@
   programs.thunar.plugins = with pkgs; [
    thunar-volman                               # Automount
    thunar-archive-plugin                       # Archive Ops
+   file-roller                                 # unzipper
+   feh                                         # File viewer
   ];
   services.gvfs.enable = true;                 # Allows thunar to see a drives
   services.udisks2.enable = true;              # Allows usb drives

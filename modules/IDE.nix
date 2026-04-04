@@ -12,5 +12,6 @@
     python315                           # Python
     zed-editor             # Other stuff
     curlpp
+    vscode
   ];
 }

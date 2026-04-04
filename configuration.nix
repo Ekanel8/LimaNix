@@ -10,42 +10,39 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-  # nano (default)
-  git
-	tree
-	bash
-	vim
-  cava
-	file-roller                                 # unzipper
-	feh
-	pass-wayland
-	wget
-	firefox
-	wev
-	tcpdump
-	ffmpeg
-	htop
-	killall
-	tlp #batary
-	acpi
-	usbutils
-	acpica-tools
-	discord
-	vencord
-	kitty
-	neovim
-	xray
-	unzip
-	fastfetch
-	obsidian
-	brightnessctl
+  # <- ESSENCIALS ->
+    # nano (default)
+    git
+    tree
+    bash
+    vim
+    htop
+    wget
+    killall
+    firefox
+  # <- SYS-UTILS ->
+    wev
+    tcpdump
+    ffmpeg
+    tlp #batary
+    acpi
+    usbutils
+    acpica-tools
+    unzip
+    brightnessctl
+  # <- USER ->
+    discord
+      vencord
+    kitty
+    obsidian
+    grim                            # screenshots
+    slurp                           # screenshots
+    throne
+       xray
+	# <- FONTS ->
 	jetbrains-mono
   font-awesome
-	grim                            # screenshots
-	slurp                           # screenshots
-	throne
-	cbonsai
-  # <<< Clipboard >>>
+  # <- CLIPBOARD ->
 	wl-clipboard
 	wl-clip-persist
   ];

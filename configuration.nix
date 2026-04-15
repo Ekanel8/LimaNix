@@ -12,6 +12,10 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    virtualbox
+    terraform
+    ansible
+    vagrant
     git
     tree
     bash

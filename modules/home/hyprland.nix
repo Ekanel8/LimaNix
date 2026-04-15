@@ -17,7 +17,7 @@
       ];
 
       xwayland = {
-        force_zero_scaling = true;
+        force_zero_scaling = false;
       };
 
       # --- Autostart ---
@@ -28,7 +28,7 @@
         "wl-paste --watch cliphist store"
       ];
 
-      # --- Переменные окружения ---
+      # --- Env ---
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
@@ -36,7 +36,8 @@
         "HYPRCURSOR_THEME,Bibata-Modern-Classic"
       ];
 
-      # --- Внешний вид ---
+
+      # --- Look ---
       general = {
         gaps_in = 5;
         gaps_out = 20;
@@ -112,7 +113,7 @@
         disable_hyprland_logo = true;
       };
 
-      # --- Ввод ---
+      # --- Inputs ---
       input = {
         kb_layout = "us,ru";
         kb_options = "grp:win_space_toggle";

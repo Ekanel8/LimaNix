@@ -5,6 +5,7 @@
      libvirt = {};
    };
 
+
   virtualisation = {
     spiceUSBRedirection.enable = true;
 

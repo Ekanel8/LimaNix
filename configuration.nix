@@ -15,7 +15,7 @@
     virtualbox
     terraform
     ansible
-    vagrant
+    cava
     git
     tree
     bash

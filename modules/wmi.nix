@@ -11,14 +11,19 @@ let
       owner = "Ekanel8";
       repo = "Redmibook-2023-WMI-NixOS-Module";
       rev = "main";
-      sha256 = "sha256-tW8Ft9h46uJc+Ch9KPk0tdk+w2BjfQtbFwS7k/GXjwk=";
+      sha256 = "sha256-/6z6rJUt2p4FWOypc8SE+DEyiHeXKOO+3X0JbUNPkL8=";
     };
 
     buildInputs = [
       config.boot.kernelPackages.kernel.dev
       pkgs.gnumake
       pkgs.gcc
+      pkgs.pahole
     ];
+
+    postUnpack = "
+      echo 'obj-m := redmibook_wmi.o' > $sourceRoot/Makefile
+    ";
 
     buildPhase = ''
       make -C ${config.boot.kernelPackages.kernel.dev}/lib/modules/${config.boot.kernelPackages.kernel.dev.modDirVersion}/build \

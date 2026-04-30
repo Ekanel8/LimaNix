@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    packer
     virtualbox
     terraform
     ansible
@@ -36,7 +37,7 @@
     brightnessctl
   # <- USER ->
     discord
-      vencord
+    vencord
     kitty
     obsidian
     grim                            # screenshots

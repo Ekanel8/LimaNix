@@ -13,7 +13,6 @@
   # <- ESSENCIALS ->
     # nano (default)
     packer
-    virtualbox
     terraform
     ansible
     cava

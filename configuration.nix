@@ -16,7 +16,6 @@
     packer
     terraform
     ansible
-    cava
     git
     tree
     bash

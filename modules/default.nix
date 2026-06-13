@@ -2,10 +2,9 @@
   imports =
     [
       ./bootloader.nix
-      ./wmi.nix
+      #./wmi.nix
       ./network.nix
       ./bluetooth.nix
-      #./modules/sddm.nix
       ./audio.nix
       ./locales.nix
       ./user.nix

@@ -19,9 +19,7 @@
     },
     "home-manager-unstable": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": ["nixpkgs"]
       },
       "locked": {
         "lastModified": 1777518431,
@@ -87,9 +85,7 @@
     },
     "noctalia": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
+        "nixpkgs": ["nixpkgs"],
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
@@ -108,10 +104,7 @@
     },
     "noctalia-qs": {
       "inputs": {
-        "nixpkgs": [
-          "noctalia",
-          "nixpkgs"
-        ],
+        "nixpkgs": ["noctalia", "nixpkgs"],
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       },
@@ -155,11 +148,7 @@
     },
     "treefmt-nix": {
       "inputs": {
-        "nixpkgs": [
-          "noctalia",
-          "noctalia-qs",
-          "nixpkgs"
-        ]
+        "nixpkgs": ["noctalia", "noctalia-qs", "nixpkgs"]
       },
       "locked": {
         "lastModified": 1775636079,

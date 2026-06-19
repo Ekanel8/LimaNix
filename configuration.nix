@@ -13,6 +13,7 @@
   # <- ESSENCIALS ->
     # nano (default)
     jenkins
+    easyeffects
     code-cursor
     packer
     terraform
@@ -54,7 +55,6 @@
 
 
   # [==== Programs interactions  ====]
-  # programs.niri.enable = true;
   programs.hyprland.enable = true;
   programs.fish.enable = true;
   # [==== Services ====]

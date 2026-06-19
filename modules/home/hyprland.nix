@@ -139,7 +139,7 @@
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, $menu"
         # "$mainMod, P, pseudo,"
-        "$mainMod, J, layoutmsg, togglesplit,"
+        "$mainMod, J, layoutmsg, togglesplit"
         "$mainMod, 211, exec, zeditor /home/doc/.dotfiles"
         "$mainMod, P, exec, hyprctl dispatch movetoworkspace 5 && Throne & sleep 2 && hyprctl dispatch closewindow class:Throne"
         "$mainMod, B, exec, firefox"

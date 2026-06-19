@@ -2,7 +2,7 @@
   imports =
     [
       ./bootloader.nix
-      #./wmi.nix
+      ./wmi.nix
       ./network.nix
       ./bluetooth.nix
       ./audio.nix

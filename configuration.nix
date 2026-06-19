@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    jenkins
     code-cursor
     packer
     terraform

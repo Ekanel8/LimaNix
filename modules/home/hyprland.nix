@@ -2,11 +2,12 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     settings = {
       # --- Environment ---
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
-      "$menu" = "noctalia-shell ipc call launcher toggle";
+      "$menu" = "noctalia msg panel-toggle launcher";
       "$browser" = "firefox";
       "$mainMod" = "SUPER";
 
@@ -22,7 +23,7 @@
 
       # --- Autostart ---
       "exec-once" = [
-        "noctalia-shell"
+        "noctalia"
         "wl-clip-persist --clipboard regular"
         "wl-clipboard-history -t"
         "wl-paste --watch cliphist store"
@@ -100,7 +101,6 @@
 
       # --- Layouts & Misc ---
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -139,7 +139,7 @@
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, $menu"
         # "$mainMod, P, pseudo,"
-        "$mainMod, J, togglesplit,"
+        "$mainMod, J, layoutmsg, togglesplit,"
         "$mainMod, 211, exec, zeditor /home/doc/.dotfiles"
         "$mainMod, P, exec, hyprctl dispatch movetoworkspace 5 && Throne & sleep 2 && hyprctl dispatch closewindow class:Throne"
         "$mainMod, B, exec, firefox"
@@ -149,9 +149,9 @@
         # Screenshots & Syscalls
         ", Print, exec, grim - | tee ~/Screenshots/$(date +'%d.%m_%H:%M').png | wl-copy"
         ", 157, exec, grim -g \"$(slurp -d)\" - | tee ~/Screenshots/$(date +'%d.%m_%H:%M').png | wl-copy"
-        ", 234, exec, noctalia-shell ipc call sessionMenu lockAndSuspend"
-        ", 211, exec, noctalia-shell ipc call settings toggle"
-        ", 210, exec, noctalia-shell ipc call wallpaper random"
+        ", 234, exec, noctalia msg session lock-and-suspend"
+        ", 211, exec, noctalia msg settings-toggle"
+        ", 210, exec, noctalia msg wallpaper-random"
 
         #  Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

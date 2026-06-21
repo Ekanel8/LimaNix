@@ -13,4 +13,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
   nix.settings.experimental-features   = ["nix-command" "flakes"];
   boot.kernelModules = [ ];
+  boot.kernelParams = [
+      "amd_pstate=guided"
+      "amd_pstate.shared_mem=1"
+      "initcall_blacklist=acpi_cpufreq_init"
+      "pcie_aspm=force"
+      "module_blacklist=ucsi_acpi"
+      "preempt=voluntary"
+      "nowatchdog"
+  ];
 }

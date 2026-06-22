@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    gpu-screen-recorder
     easyeffects
     code-cursor
     packer

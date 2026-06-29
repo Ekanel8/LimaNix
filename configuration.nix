@@ -12,6 +12,9 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    nodejs
+    herdr
+    opencode
     gpu-screen-recorder
     easyeffects
     code-cursor
@@ -48,6 +51,7 @@
 	# <- FONTS ->
 	jetbrains-mono
   font-awesome
+  nerd-fonts.jetbrains-mono
   # <- CLIPBOARD ->
 	wl-clipboard
 	wl-clip-persist

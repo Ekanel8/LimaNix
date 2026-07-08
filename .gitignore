@@ -2,3 +2,4 @@ Secrets/
 env/
 modules/home/jetbra.sh
 img/
+modules/wg.nix

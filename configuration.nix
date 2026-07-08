@@ -5,14 +5,23 @@
       ./modules
       ./hardware-configuration.nix
     ];
-
+    networking.extraHosts = ''
+      172.16.100.100 nexus.d-t.by
+      172.16.100.100 openproject.d-t.by
+    '';
+    networking.wireguard.enable = true;
   # [==== PKGS ====]
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    opentofu
+    remmina
+    dnsutils
+    getent
     nodejs
+    python313Packages.pywinrm
     herdr
     opencode
     gpu-screen-recorder

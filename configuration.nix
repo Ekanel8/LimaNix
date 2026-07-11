@@ -5,13 +5,8 @@
       ./modules
       ./hardware-configuration.nix
     ];
-    networking.extraHosts = ''
-      172.16.100.100 nexus.d-t.by
-      172.16.100.100 openproject.d-t.by
-    '';
-    networking.wireguard.enable = true;
-  # [==== PKGS ====]
 
+  ############ PKGS ############
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
@@ -51,7 +46,6 @@
     brightnessctl
   # <- USER ->
     discord
-    vencord
     kitty
     obsidian
     grim                            # screenshots

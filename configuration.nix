@@ -16,6 +16,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    keepassxc
     opentofu
     remmina
     dnsutils

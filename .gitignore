@@ -1,5 +1,3 @@
-Secrets/
-env/
-modules/home/jetbra.sh
+secrets/
 img/
 modules/wg.nix

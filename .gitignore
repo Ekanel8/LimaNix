@@ -1,4 +1,2 @@
 secrets/
 img/
-modules/wg.nix
-*.lua

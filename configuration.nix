@@ -11,13 +11,17 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    traceroute
+    #termius
     keepassxc
+    minicom
+    tor-browser
+    libtelnet
     opentofu
     remmina
     dnsutils
     getent
     nodejs
-    python313Packages.pywinrm
     herdr
     opencode
     gpu-screen-recorder

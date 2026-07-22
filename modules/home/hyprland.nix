@@ -12,9 +12,13 @@
       "$mainMod" = "SUPER";
 
       # --- Monitors ---
+      #monitor = [
+      #  ",preferred,auto,auto"
+      #  ",highres,auto,2"
+      #];
       monitor = [
-        ",preferred,auto,auto"
-        ",highres,auto,2"
+        "eDP-1,3200x2000@120,0x0,2"
+        "HDMI-A-1,2560x1440@144,1600x0,1.6"
       ];
 
       xwayland = {
@@ -152,6 +156,7 @@
         ", 234, exec, noctalia msg session lock-and-suspend"
         ", 211, exec, noctalia msg settings-toggle"
         ", 210, exec, noctalia msg wallpaper-random"
+        ", 135, exec, bash ~/.dotfiles/modules/scripts/hyprctl.sh"
 
         #  Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

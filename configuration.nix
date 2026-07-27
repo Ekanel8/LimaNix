@@ -15,8 +15,10 @@
     #termius
     keepassxc
     minicom
+    thorium-reader
     tor-browser
     libtelnet
+    caddy
     opentofu
     remmina
     dnsutils
@@ -24,7 +26,6 @@
     nodejs
     herdr
     opencode
-    gpu-screen-recorder
     easyeffects
     code-cursor
     packer
@@ -71,6 +72,7 @@
   programs.fish.enable = true;
   # [==== Services ====]
   services.power-profiles-daemon.enable = true;
+  programs.gpu-screen-recorder.enable = true;
   services.upower.enable = true;
   services.flatpak.enable = true;
   # Downloaded version of system. Do not need to change it

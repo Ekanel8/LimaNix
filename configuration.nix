@@ -12,7 +12,6 @@
   # <- ESSENCIALS ->
     # nano (default)
     traceroute
-    #termius
     keepassxc
     minicom
     thorium-reader

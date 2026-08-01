@@ -6,7 +6,6 @@
     ./gtk.nixhyprland-new
     ./passtore.nix
     ./fastfetch.nix
-    #./hyprland.nix
     #./noctalia.nix TODO: my settings
   ];
 }

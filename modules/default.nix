@@ -9,7 +9,6 @@
       ./locales.nix
       ./user.nix
       ./noctalia.nix
-      ./wg.nix
       ###################
       ./virt.nix
       ./thunar.nix

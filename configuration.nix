@@ -54,7 +54,7 @@
     wev
     tcpdump
     ffmpeg
-    tlp #batary
+    tlp
     acpi
     usbutils
     acpica-tools
@@ -63,11 +63,12 @@
   # <- USER ->
     nil
     nixd
+    package-version-server
     discord
     kitty
     obsidian
-    grim                            # screenshots
-    slurp                           # screenshots
+    grim
+    slurp
     #throne
        xray
 	# <- FONTS ->

@@ -3,8 +3,7 @@
     ./fish.nix
     ./kitty.nix
     ./zed.nix
-    ./gtk.nixhyprland-new
-    ./passtore.nix
+    ./gtk.nix
     ./fastfetch.nix
     #./noctalia.nix TODO: my settings
   ];

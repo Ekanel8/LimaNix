@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports =
     [
@@ -7,7 +7,7 @@
     ];
 
   ############ PKGS ############
-  programs.throne =
+  programs.throne = #DELETE IT AFTER MERGE
     let
       pkgs-from-pr = import (fetchTarball {
         url = "https://github.com/NixOS/nixpkgs/archive/0cbdc25b4df6051689052125cb550485f09dfb59.tar.gz";
@@ -61,6 +61,7 @@
     unzip
     brightnessctl
   # <- USER ->
+    nil
     discord
     kitty
     obsidian

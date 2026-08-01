@@ -11,7 +11,6 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
-    new-throne
     traceroute
     keepassxc
     minicom

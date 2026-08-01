@@ -62,6 +62,7 @@
     brightnessctl
   # <- USER ->
     nil
+    nixd
     discord
     kitty
     obsidian

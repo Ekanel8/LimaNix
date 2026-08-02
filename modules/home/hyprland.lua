@@ -248,7 +248,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("Throne"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pkill Throne || Throne"), { release = true })
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
 
 hl.bind(mainMod .. " + code:211", hl.dsp.exec_cmd("zeditor ~/.dotfiles"))

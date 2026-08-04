@@ -257,7 +257,10 @@ hl.bind("code:157", hl.dsp.exec_cmd([[grim -g "$(slurp -d)" - | tee ~/Screenshot
 hl.bind("code:234", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"))
 hl.bind("code:211", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
 hl.bind("code:210", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
-hl.bind("code:135", hl.dsp.exec_cmd("bash ~/.dotfiles/modules/scripts/hyprctl.sh"))
+hl.bind("code:135", function()
+    disabled = not disabled
+    hl.monitor({ output = "eDP-1", disabled = disabled })
+end)
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -352,5 +355,5 @@ hl.window_rule({
 
 hl.window_rule({
   match = { class = "Throne" },
-  workspace = "special silent"
+  workspace = "10 silent"
 })

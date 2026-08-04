@@ -23,6 +23,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    libreoffice
     traceroute
     keepassxc
     minicom

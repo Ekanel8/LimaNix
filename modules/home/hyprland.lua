@@ -257,6 +257,7 @@ hl.bind("code:157", hl.dsp.exec_cmd([[grim -g "$(slurp -d)" - | tee ~/Screenshot
 hl.bind("code:234", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"))
 hl.bind("code:211", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
 hl.bind("code:210", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg bar-toggle"))
 hl.bind("code:135", function()
     disabled = not disabled
     hl.monitor({ output = "eDP-1", disabled = disabled })

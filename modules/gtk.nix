@@ -4,7 +4,7 @@
     gtk4
     gtk3
     papirus-icon-theme # Icons
-    graphite-gtk-theme # Theme
+    colloid-gtk-theme # Theme
     bibata-cursors
   ];
   environment.variables = {

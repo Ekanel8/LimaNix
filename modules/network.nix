@@ -11,9 +11,10 @@
 
   services.openssh = {                                 # Enable the OpenSSH daemon
     enable = true;
-    # settings = {
-    #	 PermitRootLogin = "yes";
-    #};
+    settings = {
+    	 PermitRootLogin = "no";
+       PasswordAuthentication = false;
+    };
   };
 
   networking.hostName                  = "tardis";      # Define your hostname.

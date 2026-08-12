@@ -14,7 +14,7 @@
   nix.settings.experimental-features   = ["nix-command" "flakes"];
   boot.kernelModules = [ ];
   boot.kernelParams = [
-      "amd_pstate=guided"
+      "amd_pstate=passive"
       "amd_pstate.shared_mem=1"
       "initcall_blacklist=acpi_cpufreq_init"
       "pcie_aspm=force"

@@ -23,7 +23,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
-    libreoffice
+    todo
     traceroute
     keepassxc
     minicom
@@ -39,7 +39,6 @@
     herdr
     opencode
     easyeffects
-    code-cursor
     packer
     terraform
     ansible

@@ -23,6 +23,11 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    czkawka
+    jmespath
+    avahi
+    kdePackages.filelight
+    telegram-desktop
     todo
     traceroute
     keepassxc

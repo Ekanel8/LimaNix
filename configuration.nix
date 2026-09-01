@@ -17,7 +17,7 @@
     {
       enable = true;
       package = pkgs-from-pr.throne;
-      # tunMode.enable = true;
+      tunMode.enable = true;
     };
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
@@ -25,6 +25,13 @@
     # nano (default)
     czkawka
     jmespath
+    imagemagick
+    cloudflared
+    aircrack-ng
+    kubernetes
+    minikube
+    nmap
+    jq
     avahi
     kdePackages.filelight
     telegram-desktop

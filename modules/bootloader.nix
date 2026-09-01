@@ -1,6 +1,6 @@
 { config, pkgs, inputs, ... }:
 {
-  services.getty.autologinUser = "doc";
+  #services.getty.autologinUser = "doc";
   environment.loginShellInit = ''
     if [ "$(tty)" = "/dev/tty1" ];
     then

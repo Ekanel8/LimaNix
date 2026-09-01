@@ -7,18 +7,6 @@
     ];
 
   ############ PKGS ############
-  programs.throne = #DELETE IT AFTER MERGE
-    let
-      pkgs-from-pr = import (fetchTarball {
-        url = "https://github.com/NixOS/nixpkgs/archive/0cbdc25b4df6051689052125cb550485f09dfb59.tar.gz";
-        sha256 = "sha256:1791gf9cnsfkcfv2dg15yb4y5yb8nj8lzavm3j7a0c7x7h22cq35";
-      }) { inherit (pkgs.stdenv.hostPlatform) system; };
-    in
-    {
-      enable = true;
-      package = pkgs-from-pr.throne;
-      tunMode.enable = true;
-    };
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
@@ -81,8 +69,7 @@
     obsidian
     grim
     slurp
-    #throne
-       xray
+    xray #core for throne
 	# <- FONTS ->
 	jetbrains-mono
   font-awesome
@@ -96,12 +83,16 @@
   # [==== Programs interactions  ====]
   programs.hyprland.enable = true;
   programs.fish.enable = true;
+  programs.throne = {
+    enable = true;
+    tunMode.enable = true;
+  };
+  programs.gpu-screen-recorder.enable = true;
   # [==== Services ====]
   services.power-profiles-daemon.enable = true;
-  programs.gpu-screen-recorder.enable = true;
   services.upower.enable = true;
   services.flatpak.enable = true;
-  # Downloaded version of system. Do not need to change it
+  # Don't change
   system.stateVersion = "25.05";
 
 }

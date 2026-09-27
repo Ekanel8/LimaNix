@@ -250,7 +250,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pkill Throne || Throne"), { release = true })
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("flatpak run com.trougnouf.Cfait"))
+-- hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("flatpak run com.danklinux.dankcalendar"))
 
 hl.bind(mainMod .. " + code:211", hl.dsp.exec_cmd("zeditor ~/.dotfiles"))
 hl.bind("Print", hl.dsp.exec_cmd("grim - | tee ~/Screenshots/$(date +'%d.%m_%H:%M').png | wl-copy"))

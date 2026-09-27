@@ -49,15 +49,15 @@
         }
         {
           type = "host";
-          key = "│ {#33}󰌢 Host     {#keys}│";
+          key = "│ {#33} Host     {#keys}│";
         }
         {
           type = "kernel";
-          key = "│ {#34} Kernel   {#keys}│";
+          key = "│ {#34} Kernel   {#keys}│";
         }
         {
           type = "uptime";
-          key = "│ {#35}󰅐 Uptime   {#keys}│";
+          key = "│ {#35} Uptime   {#keys}│";
         }
         {
           type = "shell";
@@ -69,11 +69,11 @@
         }
         {
           type = "display";
-          key = "│ {#39}󰍹 Display  {#keys}│";
+          key = "│ {#39}󱡶 Display  {#keys}│";
         }
         {
           type = "terminal";
-          key = "│ {#31} Terminal {#keys}│";
+          key = "│ {#31} Terminal {#keys}│";
         }
         {
           type = "resolution";
@@ -81,31 +81,31 @@
         }
         {
           type = "cpu";
-          key = "│ {#33}󰍛 CPU      {#keys}│";
+          key = "│ {#33} CPU      {#keys}│";
         }
         {
           type = "gpu";
-          key = "│ {#34}󰢮 GPU      {#keys}│";
+          key = "│ {#34} GPU      {#keys}│";
         }
         {
           type = "memory";
-          key = "│ {#35}󰾆 Memory   {#keys}│";
+          key = "│ {#35} Memory   {#keys}│";
         }
         {
           type = "disk";
-          key = "│ {#37}󰋊 Disk     {#keys}│";
+          key = "│ {#37} Disk     {#keys}│";
         }
         {
           type = "battery";
-          key = "│ {#38}󰁹 Battery  {#keys}│";
+          key = "│ {#38} Battery  {#keys}│";
         }
         {
           type = "localip";
-          key = "│ {#39}󰩟 IP       {#keys}│";
+          key = "│ {#39} IP       {#keys}│";
         }
         {
           type = "locale";
-          key = "│ {#32}󰬎 Locale   {#keys}│";
+          key = "│ {#32} Locale   {#keys}│";
         }
         {
           type = "custom";

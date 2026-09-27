@@ -14,23 +14,15 @@
     czkawka
     jmespath
     imagemagick
-    cloudflared
-    aircrack-ng
     kubernetes
     minikube
-    nmap
-    jq
-    avahi
     kdePackages.filelight
-    telegram-desktop
     todo
     traceroute
     keepassxc
     minicom
     thorium-reader
     tor-browser
-    libtelnet
-    caddy
     opentofu
     remmina
     dnsutils

@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    wireshark
     czkawka
     jmespath
     imagemagick

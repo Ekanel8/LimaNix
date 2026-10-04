@@ -22,4 +22,8 @@
       "preempt=voluntary"
       "nowatchdog"
   ];
+  swapDevices = [
+    { device = "/dev/nvme0n1p5"; }
+  ];
+  boot.resumeDevice = "/dev/nvme0n1p5";
 }

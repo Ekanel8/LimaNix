@@ -12,6 +12,7 @@
   # <- ESSENCIALS ->
     # nano (default)
     dmidecode
+    fortune
     nh
     wireshark
     czkawka

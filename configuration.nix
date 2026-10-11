@@ -11,9 +11,9 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    seahorse
     dmidecode
     fortune
-    nh
     wireshark
     czkawka
     jmespath
@@ -77,6 +77,8 @@
 
 
   # [==== Programs interactions  ====]
+  security.pam.services.login.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
   programs.hyprland.enable = true;
   programs.fish.enable = true;
   programs.throne = {

@@ -19,6 +19,8 @@ in
   };
 
   # ===============BE AWARE==================
+  # Powerbutton
+  services.logind.settings.Login.HandlePowerKey = "ignore";
   # Loading
   boot = {
      consoleLogLevel = 3;

@@ -12,6 +12,8 @@
   # <- ESSENCIALS ->
     # nano (default)
     seahorse
+    unoconv
+    cloud-init
     dmidecode
     fortune
     wireshark

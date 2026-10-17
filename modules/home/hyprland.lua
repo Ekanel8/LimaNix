@@ -259,6 +259,7 @@ hl.bind("code:234", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"), { 
 hl.bind("code:211", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
 hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle"))
 hl.bind("code:210", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
+hl.bind("code:124", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("noctalia msg bar-toggle"))
 hl.bind("code:135", function()
     disabled = not disabled

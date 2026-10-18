@@ -11,6 +11,8 @@
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->
     # nano (default)
+    qimgv
+    clapper
     seahorse
     smartmontools
     unoconv

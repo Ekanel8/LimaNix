@@ -12,6 +12,7 @@
   # <- ESSENCIALS ->
     # nano (default)
     seahorse
+    smartmontools
     unoconv
     cloud-init
     dmidecode
@@ -76,7 +77,6 @@
 	wl-clipboard
 	wl-clip-persist
   ];
-
 
   # [==== Programs interactions  ====]
   security.pam.services.login.enableGnomeKeyring = true;

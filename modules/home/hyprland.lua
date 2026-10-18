@@ -71,12 +71,12 @@ hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 10,
 
-        border_size = 2,
+        border_size = 1,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(33ccffee)"}, angle = 45 },
+            active_border   = { colors = {"rgba(c7bfffff)", "rgba(c7bfffff)"}, angle = 45 }, --rgba(33ccffee)
             inactive_border = "rgba(595959aa)",
         },
 

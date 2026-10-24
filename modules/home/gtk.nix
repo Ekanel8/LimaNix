@@ -14,7 +14,7 @@
   services.xsettingsd = {
     enable = true;
     settings = {
-      "Net/ThemeName" = "Colloid-dark";
+      "Net/ThemeName" = "Colloid-Dark";
       "Net/IconThemeName" = "Papirus-Dark";
       "Gtk/FontName" = "Inter 10";
     };

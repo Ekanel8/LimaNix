@@ -75,6 +75,7 @@
 	jetbrains-mono
   font-awesome
   nerd-fonts.jetbrains-mono
+  bibata-cursors
   # <- CLIPBOARD ->
 	wl-clipboard
 	wl-clip-persist

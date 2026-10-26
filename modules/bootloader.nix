@@ -25,7 +25,7 @@ in
   boot = {
      consoleLogLevel = 3;
      loader.timeout = 3;
-     initrd.verbose = false;
+     #initrd.verbose = false;
    };
   # kernel verison
   boot.kernelPackages = pkgs.linuxPackages_latest;

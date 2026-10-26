@@ -1,10 +1,4 @@
-{ pkgs, inputs, config, ... }:
-let
-  stablePkgs = import inputs.nixpkgs-stable {
-    system = pkgs.system;
-    config = config.nixpkgs.config; # Важно: переносим конфиг (allowUnfree и т.д.)
-  };
-in
+{ pkgs, ... }:
 {
   imports =
     [
@@ -13,11 +7,6 @@ in
     ];
 
   ############ PKGS ############
-  nixpkgs.overlays = [
-      (final: prev: {
-        obsidian = stablePkgs.obsidian;
-      })
-    ];
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
   # <- ESSENCIALS ->

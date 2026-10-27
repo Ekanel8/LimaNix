@@ -82,6 +82,9 @@
   ];
 
   # [==== Programs interactions  ====]
+  environment.variables = {
+    QT_QPA_PLATFORMTHEME = "gtk3";
+  };
   security.pam.services.login.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
   programs.hyprland.enable = true;

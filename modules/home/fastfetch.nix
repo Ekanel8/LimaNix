@@ -39,7 +39,7 @@
         }
         {
           type = "title";
-          key = "│ {#31}✡ User     {#keys}│";
+          key = "│ {#31} User     {#keys}│";
           format = "{#blue}{user-name}{#}@{#blue}{host-name}{#}";
           color = "blue";
         }

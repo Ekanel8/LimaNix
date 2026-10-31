@@ -36,7 +36,6 @@
     remmina
     dnsutils
     getent
-    nodejs
     herdr
     opencode
     easyeffects

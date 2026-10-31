@@ -11,7 +11,7 @@ let
       owner = "Ekanel8";
       repo = "Redmibook-2023-WMI-NixOS-Module";
       rev = "main";
-      sha256 = "sha256-dbT3Bqvv3y+6ToBkwwVtKKxhbzQhe1zjvFT+hLi3AHs=";
+      sha256 = "sha256-zZdn3DaNGM9i2pP7XFfU6kxWDQ6GT85vzvloa8RPGNs=";
     };
 
     buildInputs = [

@@ -11,9 +11,9 @@ hl.monitor({
 
 hl.monitor({
   output = "HDMI-A-1",
-  mode = "2560x1440@144",
+  mode = "1920x1080@100",
   position = "1600x0",
-  scale = 1.33,
+  scale = 1,
 })
 
 ---------------------

@@ -12,6 +12,7 @@
   # <- ESSENCIALS ->
     # nano (default)
     qimgv
+    openssl
     clapper
     seahorse
     smartmontools

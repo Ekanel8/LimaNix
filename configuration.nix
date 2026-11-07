@@ -3,6 +3,7 @@
   ############ PKGS ############
   environment.systemPackages = with pkgs; [
     # nano (default)
+    openssl
     qimgv
     clapper
     seahorse

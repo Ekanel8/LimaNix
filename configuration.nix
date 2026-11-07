@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   ############ PKGS ############
-  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # nano (default)
     qimgv
@@ -100,7 +99,10 @@
   };
 
   ############ System (Do not change) ############
+  nix.settings.experimental-features   = ["nix-command" "flakes"];
+  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
+  services.logind.settings.Login.HandlePowerKey = "ignore";
   imports =
   [
     ./modules

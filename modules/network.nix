@@ -7,8 +7,6 @@
 
   networking.wireguard.enable = true;
 
-  #networking.proxy.default = "http://127.0.0.1:2080";
-
   services.openssh = {                                 # Enable the OpenSSH daemon
     enable = true;
     settings = {

@@ -8,6 +8,7 @@
       ./locales.nix
       ./user.nix
       ./noctalia.nix
+      ./tuigreet.nix
       ###################
       ./virt.nix
       ./thunar.nix

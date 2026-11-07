@@ -367,3 +367,6 @@ hl.window_rule({
   match = { class = "Throne" },
   workspace = "10 silent"
 })
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

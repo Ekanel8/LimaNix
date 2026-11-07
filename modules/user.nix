@@ -3,7 +3,7 @@
   users.users.doc = {
     isNormalUser  = true;
     description   = "doc";
-    extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" "libvirt" "wireshark"];
+    extraGroups   = [ "networkmanager" "wheel" "storage" "plugdev" "users" "libvirt" "docker"];
     packages      = with pkgs; [ ];
 	  shell         = pkgs.fish;
   };

@@ -11,7 +11,5 @@
       ###################
       ./virt.nix
       ./thunar.nix
-      ./IDE.nix
-      ./docker.nix
     ];
 }

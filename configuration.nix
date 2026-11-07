@@ -77,12 +77,28 @@
   # <- CLIPBOARD ->
 	wl-clipboard
 	wl-clip-persist
+  gnumake
+  docker-compose
+  go
+  gcc
+  ninja
+  cmake
+  python315
+  zed-editor
+  curlpp
+  vscode
   ];
 
   # [==== Programs interactions  ====]
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = false;
+  };
+
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "gtk3";
   };
+
   security.pam.services.login.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
   programs.hyprland.enable = true;

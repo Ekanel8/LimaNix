@@ -263,7 +263,7 @@ hl.bind("Print", hl.dsp.exec_cmd("grim - | tee ~/Screenshots/$(date +'%d.%m_%H:%
 hl.bind("XF86SelectiveScreenshot", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 hl.bind("XF86Assistant", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"), { locked = true })
 hl.bind("XF86Tools", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
--- hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle")) # rep issue
+-- hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("noctalia msg bar-toggle"))

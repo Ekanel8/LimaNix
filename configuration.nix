@@ -37,7 +37,6 @@
     dnsutils
     getent
     herdr
-    opencode
     easyeffects
     packer
     terraform

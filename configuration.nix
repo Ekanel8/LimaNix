@@ -1,15 +1,8 @@
 { pkgs, ... }:
 {
-  imports =
-    [
-      ./modules
-      ./hardware-configuration.nix
-    ];
-
   ############ PKGS ############
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-  # <- ESSENCIALS ->
     # nano (default)
     qimgv
     clapper
@@ -49,7 +42,6 @@
     wget
     killall
     firefox
-  # <- SYS-UTILS ->
     wev
     tcpdump
     ffmpeg
@@ -59,7 +51,6 @@
     acpica-tools
     unzip
     brightnessctl
-  # <- USER ->
     nil
     nixd
     package-version-server
@@ -68,51 +59,51 @@
     obsidian
     grim
     slurp
-    xray #core for throne
-	# <- FONTS ->
-	jetbrains-mono
-  font-awesome
-  nerd-fonts.jetbrains-mono
-  bibata-cursors
-  # <- CLIPBOARD ->
-	wl-clipboard
-	wl-clip-persist
-  gnumake
-  docker-compose
-  go
-  gcc
-  ninja
-  cmake
-  python315
-  zed-editor
-  curlpp
-  vscode
+    xray
+    jetbrains-mono
+    font-awesome
+    nerd-fonts.jetbrains-mono
+    bibata-cursors
+    wl-clipboard
+    wl-clip-persist
+    gnumake
+    docker-compose
+    go
+    gcc
+    ninja
+    cmake
+    python315
+    zed-editor
+    curlpp
+    vscode
   ];
 
-  # [==== Programs interactions  ====]
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = false;
-  };
+  ############ Systemd ############
+  services.gnome.gnome-keyring.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+  services.flatpak.enable = true;
 
+  ############ Security ############
+  security.pam.services.login.enableGnomeKeyring = true;
+
+  ############ Interactions ############
+  programs.hyprland.enable = true;
+  programs.fish.enable = true;
+  programs.throne = { enable = true; tunMode.enable = true; };
+  programs.gpu-screen-recorder.enable = true;
+  virtualisation.docker = { enable = true; enableOnBoot = false; };
+
+  ############ Environment ############
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "gtk3";
   };
 
-  security.pam.services.login.enableGnomeKeyring = true;
-  services.gnome.gnome-keyring.enable = true;
-  programs.hyprland.enable = true;
-  programs.fish.enable = true;
-  programs.throne = {
-    enable = true;
-    tunMode.enable = true;
-  };
-  programs.gpu-screen-recorder.enable = true;
-  # [==== Services ====]
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
-  services.flatpak.enable = true;
-  # Don't change
+  ############ System (Do not change) ############
   system.stateVersion = "25.05";
-
+  imports =
+  [
+    ./modules
+    ./hardware-configuration.nix
+  ];
 }

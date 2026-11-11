@@ -78,6 +78,16 @@
     vscode
   ];
 
+  nix.settings = {
+     extra-substituters = [
+       "https://noctalia.cachix.org"
+     ];
+
+     extra-trusted-public-keys = [
+       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+     ];
+   };
+
   ############ Systemd ############
   services.gnome.gnome-keyring.enable = true;
   services.power-profiles-daemon.enable = true;
@@ -88,6 +98,7 @@
   security.pam.services.login.enableGnomeKeyring = true;
 
   ############ Interactions ############
+  programs.noctalia.enable = true; #recommendedServices.enable = true;
   programs.hyprland.enable = true;
   programs.fish.enable = true;
   programs.throne = { enable = true; tunMode.enable = true; };

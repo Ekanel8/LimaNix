@@ -5,23 +5,23 @@
 hl.monitor({
   output = "eDP-1",
   mode = "3200x2000@120",
-  position = "0x0",
+  position = "1920x0",
   scale = 2,
-})
-
-hl.monitor({
-  output = "HDMI-A-1",
-  mode = "2560x1440@144",
-  position = "1600x0",
-  scale = 1.33,
 })
 
 -- hl.monitor({
 --   output = "HDMI-A-1",
---   mode = "1920x1080@100",
+--   mode = "2560x1440@144",
 --   position = "1600x0",
---   scale = 1,
+--   scale = 1.33,
 -- })
+
+hl.monitor({
+  output = "HDMI-A-1",
+  mode = "1920x1080@100",
+  position = "0x0",
+  scale = 1,
+})
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -258,14 +258,14 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pkill Throne || Throne"), { release = true })
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian --password-store=gnome-libsecret"))
 
-hl.bind(mainMod .. " + XF86Tools", hl.dsp.exec_cmd("zeditor ~/.dotfiles"))
+hl.bind(mainMod .. " + code:211", hl.dsp.exec_cmd("zeditor ~/.dotfiles"))
 hl.bind("Print", hl.dsp.exec_cmd("grim - | tee ~/Screenshots/$(date +'%d.%m_%H:%M').png | wl-copy"))
-hl.bind("XF86SelectiveScreenshot", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
-hl.bind("XF86Assistant", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"), { locked = true })
-hl.bind("XF86Tools", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
--- hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle"))
-hl.bind("XF86LaunchB", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
-hl.bind("XF86PowerOff", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
+hl.bind("code:157", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("code:234", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"), { locked = true })
+hl.bind("code:211", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
+hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle"))
+hl.bind("code:210", hl.dsp.exec_cmd("noctalia msg wallpaper-random"))
+hl.bind("code:124", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("noctalia msg bar-toggle"))
 hl.bind("Menu", function()
     disabled = not disabled
@@ -367,6 +367,7 @@ hl.window_rule({
   match = { class = "Throne" },
   workspace = "10 silent"
 })
+
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()

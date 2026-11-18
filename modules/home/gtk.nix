@@ -3,8 +3,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Colloid-Dark";
-      package = pkgs.colloid-gtk-theme;
+      name = "Fluent-Dark";
+      package = pkgs.fluent-gtk-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";
@@ -14,7 +14,7 @@
   services.xsettingsd = {
     enable = true;
     settings = {
-      "Net/ThemeName" = "Colloid-Dark";
+      "Net/ThemeName" = "Fluent-Dark";
       "Net/IconThemeName" = "Papirus-Dark";
       "Gtk/FontName" = "Inter 10";
     };

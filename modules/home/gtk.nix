@@ -10,7 +10,16 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+
+    gtk3.extraConfig = {
+      gtk-menu-images = true;
+    };
+
+    gtk4.extraConfig = {
+      gtk-menu-images = true;
+    };
   };
+
   services.xsettingsd = {
     enable = true;
     settings = {

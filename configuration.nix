@@ -3,6 +3,7 @@
   ############ PKGS ############
   environment.systemPackages = with pkgs; [
     # nano (default)
+    containerlab
     opencode
     wireguard-tools
     openssl

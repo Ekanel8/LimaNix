@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, ... }:
 {
   programs.thunar.enable = true;               # file manager
   programs.thunar.plugins = with pkgs; [

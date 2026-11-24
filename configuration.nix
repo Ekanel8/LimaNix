@@ -79,6 +79,14 @@
     zed-editor
     curlpp
     vscode
+    vagrant
+    qemu
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-spice
   ];
 
   nix.settings = {
@@ -106,7 +114,9 @@
   programs.fish.enable = true;
   programs.throne = { enable = true; tunMode.enable = true; };
   programs.gpu-screen-recorder.enable = true;
+  programs.virt-manager.enable = true;
   virtualisation.docker = { enable = true; enableOnBoot = false; };
+  virtualisation.libvirtd = { enable = true; };
 
   ############ Environment ############
   environment.variables = {

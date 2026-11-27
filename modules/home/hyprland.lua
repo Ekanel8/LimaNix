@@ -20,7 +20,7 @@ hl.monitor({
 hl.monitor({
   output = "HDMI-A-1",
   mode = "1920x1080@100",
-  position = "0x0",
+  position = "-1920x0",
   scale = 1,
 })
 
@@ -262,6 +262,7 @@ hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian --password-store=gnome-libs
 hl.bind(mainMod .. " + code:211", hl.dsp.exec_cmd("zeditor ~/.dotfiles"))
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("grim - | tee ~/Screenshots/$(date +'%d.%m_%H:%M').png | wl-copy"))
 hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("code:157", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 hl.bind("code:234", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"), { locked = true })
 hl.bind("code:211", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
 hl.bind("code:156", hl.dsp.exec_cmd("noctalia msg bluetooth-toggle"))

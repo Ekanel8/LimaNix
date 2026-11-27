@@ -3,6 +3,9 @@
   ############ PKGS ############
   environment.systemPackages = with pkgs; [
     # nano (default)
+    govc
+    guestfs-tools
+    qemu-utils
     containerlab
     opencode
     wireguard-tools
@@ -26,7 +29,6 @@
     traceroute
     keepassxc
     minicom
-    thorium-reader
     tor-browser
     opentofu
     remmina

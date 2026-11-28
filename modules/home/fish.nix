@@ -8,6 +8,7 @@
       set-env = "export (cat .env | xargs -L 1)";
       neton = "virsh net-start default";
       netoff = "virsh net-destroy default";
+      zed = "zeditor";
     };
     functions = {
       copy = {

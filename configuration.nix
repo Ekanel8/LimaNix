@@ -80,7 +80,7 @@
     python315
     zed-editor
     curlpp
-    vscode
+    #vscode
     vagrant
     qemu
     virt-manager
